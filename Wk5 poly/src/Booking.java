@@ -1,32 +1,44 @@
 import java.util.ArrayList;
 
-public class Booking {
-    ArrayList<Items> items;
+public abstract class Booking {
+    private ArrayList<Items> itemList;
 
+    private Discount discount;
 
+    public Booking(Discount discount) {
+        this.discount = discount;
+    }
+
+    protected Discount getDiscount() {
+        return discount;
+    }
+
+    protected void setDiscount(Discount discount) {
+        this.discount = discount;
+    }
 
     public void addItem(Items item) {
-        items.add(item);
+        itemList.add(item);
     }
 
     public double bookingSum() {
-        int size = items.size();
+        int size = itemList.size();
         double price = 0;
         for (int i = 0; i < size; i++) {
-            price = price + items.get(i).getPrice();
+            price = price + itemList.get(i).getPrice();
         }
         return price;
     }
 
-    public Booking(ArrayList<Items> items) {
-        this.items = items;
+    public ArrayList<Items> getItemList() {
+        return itemList;
     }
 
-    public ArrayList<Items> getItems() {
-        return items;
+    public void setItemList(ArrayList<Items> itemList) {
+        this.itemList = itemList;
     }
 
-    public void setItems(ArrayList<Items> items) {
-        this.items = items;
+    public Booking(ArrayList<Items> itemList) {
+        this.itemList = itemList;
     }
 }

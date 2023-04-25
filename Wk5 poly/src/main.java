@@ -12,6 +12,6 @@ public class main {
 
         WesternBooking booking = new WesternBooking(listOfItem);
 
-        System.out.println(booking.bookingSumWest());
+        System.out.println(booking.bookingSum());
     }
 }

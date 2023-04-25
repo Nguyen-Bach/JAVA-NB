@@ -1,7 +1,4 @@
 public class VoucherDiscount extends Discount{
-    public VoucherDiscount(String code) {
-        super(code);
-    }
 
     private double amount;
 
@@ -18,15 +15,16 @@ public class VoucherDiscount extends Discount{
         this.amount = amount;
     }
 
-    public double calculateDiscountedAmount(Booking booking, double amount) {
-        double price;
-        if (amount > booking.bookingSum()) {
-            price = 0;
-        }
-        else {
-            price = booking.bookingSum() - amount;
-        }
-        return price;
-
+    public VoucherDiscount(String code) {
+        super(code);
     }
+
+    @Override
+    public double calculatedDiscountedAmount(double sum) {
+        if (amount > sum)
+            return 0;
+        return sum - amount;
+    }
+
+
 }

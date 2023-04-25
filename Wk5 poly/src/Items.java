@@ -4,8 +4,8 @@ public class Items {
 
 
     public Items(String name, double price) {
-        this.name = name;
-        this.price = price;
+        this.name = "default";
+        this.price = 0;
     }
 
     public String getName() {
