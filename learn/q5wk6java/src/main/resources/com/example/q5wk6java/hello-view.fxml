@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#omMouseMove" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.q5wk6java.HelloController">
+   <children>
+      <Circle fx:id="circle" fill="DODGERBLUE" layoutX="300.0" layoutY="200.0" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="63.0" layoutY="170.0" />
+      <Label layoutX="286.0" layoutY="69.0" text="Outside" />
+   </children>
+</Pane>
