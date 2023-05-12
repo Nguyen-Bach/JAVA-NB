@@ -2,12 +2,19 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#omMouseMove" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.q5wk6java.HelloController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="267.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.q5wk6java.HelloController">
    <children>
-      <Circle fx:id="circle" fill="DODGERBLUE" layoutX="300.0" layoutY="200.0" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label layoutX="63.0" layoutY="170.0" />
-      <Label layoutX="286.0" layoutY="69.0" text="Outside" />
+      <Pane prefHeight="255.0" prefWidth="473.0">
+         <children>
+            <Circle fx:id="circle1" fill="DODGERBLUE" layoutX="37.0" layoutY="48.0" onMouseDragged="#onCircle2MouseDragged" onMousePressed="#onCircle2MousePressed" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle2" fill="DODGERBLUE" layoutX="150.0" layoutY="48.0" onMouseDragged="#onCircle1MouseDragged" onMousePressed="#onCircle1MousePressed" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+            <Line fx:id="line" endX="38.00001525878906" endY="32.99998474121094" layoutX="102.0" layoutY="15.0" startX="-54.66667938232422" startY="32.99998474121094" />
+            <Label fx:id="label" layoutX="80.0" layoutY="40.0" />
+         </children>
+      </Pane>
    </children>
-</Pane>
+</VBox>
