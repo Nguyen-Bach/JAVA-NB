@@ -43,9 +43,6 @@ public class HelloApplication extends Application {
         int currentFontSize = 40;
 
 
-
-
-
         EventHandler<MouseEvent> eventHandler1 = new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -76,12 +73,7 @@ public class HelloApplication extends Application {
            }
        });
 
-
-
         pane.getChildren().add(label);
-
-
-
 
         stage.setScene(scene);
         stage.setTitle("mock1");
