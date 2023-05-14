@@ -39,10 +39,10 @@ public class HelloApplication extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-    public Scene Splash() {
+    public Scene Splash() {         //splash scene
         Pane pane = new Pane();
 
-
+        //creating label and button
         Label programName = new Label("Question 1 GUI");
         programName.setLayoutX(125);
         programName.setLayoutY(25);
@@ -55,6 +55,7 @@ public class HelloApplication extends Application {
         displayDialog.setLayoutX(200);
         displayDialog.setLayoutY(100);
 
+        //change scene when press button
         displayDialog.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -71,7 +72,7 @@ public class HelloApplication extends Application {
         pane.getChildren().add(newForm);
         return new Scene(pane,350,200);
     }
-    protected Scene dialog() {
+    protected Scene dialog() {          //scene to display dialog
         GridPane pane = new GridPane();
         pane.setPadding(new Insets(25,25,25,25));
 
@@ -79,6 +80,8 @@ public class HelloApplication extends Application {
         label.setText("This is a GUI program that takes personal information and store the data to a file");
         pane.add(label,1,1);
 
+
+        //button to change scene back to splash when pressed
         Button returnButton = new Button("Return");
         returnButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -89,10 +92,12 @@ public class HelloApplication extends Application {
         pane.add(returnButton,1,2);
         return new Scene(pane);
     };
-    protected Scene createForm() {
+    protected Scene createForm() {          //scene to input information
         GridPane pane = new GridPane();
         pane.setPadding(new Insets(25, 25, 25, 25));
 
+
+        //adding label and text-field
         Label name = new Label("Name\t");
         TextField userName = new TextField();
         pane.add(name,0,1);
@@ -116,7 +121,7 @@ public class HelloApplication extends Application {
         Button submit = new Button("Submit form");
         pane.add(submit,2,5);
 
-        submit.setOnAction(new EventHandler<ActionEvent>() {
+        submit.setOnAction(new EventHandler<ActionEvent>() {        //if value is validated when button is pressed, success scene will be display
             @Override
             public void handle(ActionEvent actionEvent) {
                 stage.setScene(successScene());
